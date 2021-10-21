@@ -13,15 +13,16 @@
 		</tr>
 		<tr>
 			<td class="label-formulir">Nama</td>
-			<td class="isian-formulir"><input type="text" name="nama" value="<?php echo $r_tampil_anggota['nama']; ?>" class="isian-formulir isian-formulir-border"></td>
+			<td class="isian-formulir"><input type="text" name="name" class="isian-formulir isian-formulir-border" required></td>
 		</tr>
 		<tr>
-			<td class="label-formulir">Nama 2</td>
-			<td class="isian-formulir"><input type="text" name="name" value="" class="isian-formulir isian-formulir-border"></td>
-		</tr>
-		<tr>
-			<td class="label-formulir">Jenis Kelamin</td>
-			<td class="isian-formulir"><input type="text" name="jenis_kelamin" value="<?php echo $r_tampil_anggota['jeniskelamin']; ?>" class="isian-formulir isian-formulir-border"></td>
+		<td class="label-formulir">Jenis Kelamin</td>
+				<td class="isian-formulir">
+					<select name="jenis_kelamin" value="<?php echo $r_tampil_anggota['jeniskelamin']; ?>">
+						<option value="Laki-laki">Laki-laki</option>
+						<option value="Perempuan">Perempuan</option>
+					</select>
+				</td>
 		</tr>
 		<tr>
 			<td class="label-formulir">Alamat</td>

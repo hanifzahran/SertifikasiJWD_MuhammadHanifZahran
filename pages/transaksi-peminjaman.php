@@ -1,7 +1,7 @@
 <div id="label-page"><h3>Transaksi Peminjaman</h3></div>
 <div id="content">
-	<p id="tombol-tambah-container"><a href="index.php?p=transaksi-peminjaman-input" class="tombol">Transaksi Baru</a></p>
-	<table id="tabel-tampil">
+	<p id="tombol-tambah-container"><a href="index.php?p=transaksi-peminjaman-input" class="tombol btn btn-primary">Transaksi Baru</a></p>
+	<table id="tabel-tampil" class="table table-bordered table-hover table-striped table-responsive-lg">
 		<tr>
 			<th id="label-tampil-no">No</td>
 			<th>ID Transaksi</th>
@@ -35,8 +35,8 @@
 			<td><?php echo $r_transaksi['judulbuku']; ?></td>
 			<td><?php echo $r_transaksi['tglpinjam']; ?></td>
 			<td>
-				<div class="tombol-opsi-container"><a href="cetak/nota-peminjaman.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" target="_blank" class="tombol">Cetak Nota</a></div>
-				<div class="tombol-opsi-container"><a href="proses/pengembalian-proses.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" class="tombol">Pengembalian</a></div>
+				<div class="tombol-opsi-container"><a href="proses/nota-peminjaman.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" target="_blank " class="tombol btn btn-success">Cetak Nota</a></div>
+				<div class="tombol-opsi-container"><a href="proses/pengembalian-proses.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" class="tombol btn btn-danger" onclick="return confirm('Apakah anda yakin mengembalikan buku ini?');">Pengembalian</a></div>
 			</td>
 		</tr>
 		<?php } ?>

@@ -1,7 +1,7 @@
 <div id="label-page"><h3>Tampil Data Anggota</h3></div>
 <div id="content">
-	<p id="tombol-tambah-container"><a href="index.php?p=anggota-input" class="tombol">Tambah Anggota</a></p>
-	<table id="tabel-tampil">
+	<p id="tombol-tambah-container"><a href="index.php?p=anggota-input" class="tombol btn btn-primary">Tambah Anggota</a></p>
+	<table id="tabel-tampil" class="table table-bordered table-hover table-striped table-responsive-lg">
 		<tr>
 			<th id="label-tampil-no">No</td>
 			<th>ID Anggota</th>
@@ -28,8 +28,8 @@
 			<td><?php echo $r_tampil_anggota['alamat']; ?></td>
 			<td>
 
-				<div class="tombol-opsi-container"><a href="index.php?p=anggota-edit&id=<?php echo $r_tampil_anggota['idanggota'];?>" class="tombol">Edit</a></div>
-				<div class="tombol-opsi-container"><a href="proses/anggota-hapus.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" class="tombol">Hapus</a></div>
+				<div class="tombol-opsi-container"><a href="index.php?p=anggota-edit&id=<?php echo $r_tampil_anggota['idanggota'];?>" class="tombol btn btn-warning">Edit</a></div>
+				<div class="tombol-opsi-container"><a href="proses/anggota-hapus.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" onclick="return confirm('Apakah anda yakin delete data ini?');" class="tombol btn btn-danger">Hapus</a></div>
 			</td>
 		</tr>
 		<?php } ?>
